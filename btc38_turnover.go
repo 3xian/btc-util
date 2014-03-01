@@ -29,7 +29,7 @@ func parse(body string) float64 {
 }
 
 func getCoin(coinName string) float64 {
-	url := fmt.Sprintf("http://www.btc38.com/turnover/getTurnoverTimeLine.php?coinname=%s&n=%.20f", coinName, rand.Float64())
+	url := fmt.Sprintf("http://www.btc38.com/trade/getTradeTimeLine.php?coinname=%s&n=%.20f", coinName, rand.Float64())
 	resp, err := http.Get(url)
 	if err != nil {
 		panic(err)
